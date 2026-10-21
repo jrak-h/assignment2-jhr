@@ -39,3 +39,23 @@ hist(penguins$bill_length_mm)
 ```
 
 
+```{r}
+## p-chitima-branch
+```
+
+## Descriptive Statistics
+```{r}
+summary(penguins[, c("bill_length_mm", "bill_depth_mm","flipper_length_mm", "body_mass_g")])
+```
+## Species and Sex
+```{r}
+table(penguins$species, penguins$sex, useNA = "ifany")
+```
+
+
+## Run a linear regression: Does flipper length predict body mass?
+```{r}
+model1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(model1)
+```
+
