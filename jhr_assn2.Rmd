@@ -1,0 +1,41 @@
+---
+title: "Penguin Analysis - Jane Rak"
+output: html_document
+date: "2026-10-21"
+---
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Load CSV
+```{r}
+
+
+penguins <- read.csv("penguins.csv")
+
+```
+
+### Basic descriptive analyses
+```{r}
+
+summary(penguins)
+
+mean(penguins$bill_depth_mm, na.rm = TRUE)
+
+```
+
+
+## Visualizations
+```{r}
+
+hist(penguins$body_mass_g)
+
+hist(penguins$bill_length_mm)
+
+```
+
+
